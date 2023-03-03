@@ -1,9 +1,8 @@
-import { Router, Request, Response } from 'express';
-import { StatusCodes } from 'http-status-codes';
+import { Router } from 'express';
+import { cidadesController } from '../controllers';
 
 const router = Router();
 
-router.get('/', (_req: Request, res: Response) =>
-  res.status(StatusCodes.ACCEPTED).json({ message: 'sussukita gosta de jogar chrash' }));
+router.post('/', cidadesController.create);
 
 export default router;

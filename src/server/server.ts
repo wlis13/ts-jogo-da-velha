@@ -5,6 +5,6 @@ const server = express();
 
 server.use(express.json());
 
-server.use('/', router);
+server.use('/cidades', router);
 
 export default server;
